@@ -1,0 +1,319 @@
+## Resumo para Estudo e Prática de Excel
+
+Semana 1: Funções Básicas
+
+    Objetivo: Familiarizar-se com as funções matemáticas e de contagem mais utilizadas no Excel.
+    Tarefas:
+        Pratique funções matemáticas: SOMA, SUBTRAÇÃO, MULTIPLICAÇÃO, DIVISÃO.
+        Explore a função MÉDIA para calcular a média de um conjunto de números.
+        Utilize a função CONT.SE para contar células que atendem a um critério específico.
+        Prática: Realize exercícios simples, como criar uma planilha para calcular a média de notas ou somar valores em uma lista de despesas.
+
+Semana 2: PROCs
+
+    Objetivo: Aprender a buscar dados em tabelas de forma eficiente.
+    Tarefas:
+        Estude as funções PROCV (Pesquisa Vertical) e PROCH (Pesquisa Horizontal).
+        Pratique a busca de dados em tabelas utilizando essas funções, criando cenários onde é necessário localizar informações específicas.
+        Prática: Crie exemplos como uma planilha de inventário onde você busca o preço de um item usando o código do produto.
+
+Semana 3: Tabelas Dinâmicas
+
+    Objetivo: Dominar a criação e personalização de Tabelas Dinâmicas para análise de dados.
+    Tarefas:
+        Aprenda a criar Tabelas Dinâmicas a partir de dados brutos.
+        Pratique a agregação de dados para gerar sumários, como totais e médias.
+        Explore o uso de filtros e segmentações para refinar a visualização dos dados.
+        Prática: Crie relatórios que mostram as vendas totais por região ou produto, utilizando Tabelas Dinâmicas.
+
+Semana 4: Formatação
+
+    Objetivo: Aperfeiçoar a apresentação de dados através da formatação e criação de gráficos.
+    Tarefas:
+        Aprenda a formatar células, aplicar formatação condicional e configurar estilos personalizados para melhorar a leitura dos dados.
+        Pratique criando planilhas com formatação avançada, como tabelas de controle financeiro ou relatórios de desempenho.
+        Explore a criação de gráficos básicos para visualização de dados, como gráficos de barra, linha ou pizza.
+        Prática: Desenvolva uma planilha que inclui tanto dados formatados quanto gráficos que representem esses dados, como um dashboard simples.
+
+
+Semana 1: Funções Básicas
+
+Funções matemáticas e de contagem mais comuns no Excel, como SOMA, SUBTRAÇÃO, MULTIPLICAÇÃO, DIVISÃO, MÉDIA, e CONT.SE.
+
+Exemplo Prático:
+
+    Cenário: Você tem uma lista de despesas mensais e deseja calcular o total, a média e o número de despesas acima de um certo valor.
+    Passos:
+        SOMA: =SOMA(B2:B10) para somar as despesas na coluna B.
+        MÉDIA: =MÉDIA(B2:B10) para calcular a média das despesas.
+        CONT.SE: =CONT.SE(B2:B10,">500") para contar quantas despesas são maiores que 500.
+
+Semana 2: PROCs
+
+Funções PROCV e PROCH para buscar dados em tabelas de forma vertical e horizontal.
+
+Exemplo Prático:
+
+    Cenário: Você possui uma planilha de inventário com códigos de produtos e preços. Precisa encontrar o preço de um produto específico usando seu código.
+    Passos:
+        PROCV: =PROCV("A101", A2:C10, 3, FALSO) onde "A101" é o código do produto, A2
+        é o intervalo da tabela, 3 é a coluna do preço, e FALSO garante uma correspondência exata.
+        PROCH: Similar ao PROCV, mas usado para buscas horizontais, como =PROCH("A101", A1:F2, 2, FALSO).
+
+
+Semana 3: Tabelas Dinâmicas
+
+Criar e personalizar Tabelas Dinâmicas para resumir e analisar grandes quantidades de dados de forma eficiente.
+
+Exemplo Prático:
+
+    Cenário: Você tem dados de vendas por região e deseja criar um relatório que mostre as vendas totais por cada região.
+    Passos:
+        Criação da Tabela Dinâmica: Selecione os dados e insira uma Tabela Dinâmica (Inserir > Tabela Dinâmica).
+        Agregação de Dados: Arraste "Região" para a área de linhas e "Vendas" para a área de valores para ver as vendas totais por região.
+        Filtros e Segmentações: Adicione filtros, como por ano, ou use segmentações para refinar a visualização dos dados.
+
+
+Semana 4: Formatação
+
+Aprimorar a apresentação dos dados com formatação avançada, formatação condicional e criação de gráficos básicos.
+
+Exemplo Prático:
+
+    Cenário: Você deseja formatar uma planilha de controle financeiro, aplicando formatação condicional para destacar despesas que excedem um determinado valor e criando gráficos para visualizar os dados.
+    Passos:
+        Formatação de Células: Aplique formatação personalizada para datas e valores monetários.
+        Formatação Condicional: Use Formatação Condicional > Regras de Realce de Células > Maior que para destacar despesas acima de 500.
+        Criação de Gráficos: Selecione os dados e insira um gráfico de barras (Inserir > Gráficos > Barra) para visualizar a distribuição das despesas.
+
+
+## Resumo e Explicação de SQL
+
+SQL (Structured Query Language) é a linguagem padrão para gerenciar e manipular bancos de dados relacionais. Com SQL, você pode realizar uma ampla gama de operações, desde a criação de bancos de dados e tabelas até a inserção, atualização e exclusão de dados, além de consultar e filtrar informações.
+1. Conceitos Básicos
+
+    Bancos de Dados e Tabelas:
+        Um banco de dados é uma coleção organizada de dados. Dentro de um banco de dados, os dados são armazenados em tabelas, que consistem em linhas e colunas.
+        Exemplo: Criar uma tabela para armazenar informações de clientes.
+
+CREATE TABLE clientes (
+    id INT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    data_nascimento DATE
+);
+
+    Tipos de Dados:
+        Cada coluna em uma tabela tem um tipo de dado específico, como INT (inteiro), VARCHAR (texto), DATE (data), etc.
+
+2. Manipulação de Dados (DML)
+
+    Inserir Dados:
+        Adicione registros em uma tabela usando o comando INSERT INTO.
+        Exemplo:
+
+INSERT INTO clientes (id, nome, email, data_nascimento)
+VALUES (1, 'João Silva', 'joao.silva@email.com', '1985-03-25');
+
+Consultar Dados:
+
+    Utilize SELECT para recuperar dados de uma tabela. Você pode filtrar, ordenar e agrupar resultados.
+    Exemplo: Buscar todos os clientes.
+
+SELECT * FROM clientes;
+
+Filtro: Usando WHERE para buscar clientes nascidos depois de 1990.
+
+SELECT nome, email FROM clientes WHERE data_nascimento > '1990-01-01';
+
+Atualizar Dados:
+
+    Modifique registros existentes com o comando UPDATE.
+    Exemplo: Atualizar o email de um cliente.
+
+UPDATE clientes
+SET email = 'novo.email@email.com'
+WHERE id = 1;
+
+Excluir Dados:
+
+    Remova registros de uma tabela usando DELETE.
+    Exemplo: Excluir um cliente específico.
+
+DELETE FROM clientes WHERE id = 1;
+
+3. Definição de Dados (DDL)
+
+    Criar e Alterar Estrutura de Tabelas:
+        Além de criar tabelas, você pode alterar sua estrutura com ALTER TABLE e remover com DROP TABLE.
+        Exemplo: Adicionar uma nova coluna à tabela de clientes.
+
+ALTER TABLE clientes ADD COLUMN telefone VARCHAR(15);
+
+    Chaves Primárias e Estrangeiras:
+        Chave Primária: Identifica unicamente cada registro em uma tabela (como id em clientes).
+        Chave Estrangeira: Liga duas tabelas, criando uma relação entre elas.
+
+4. Controle de Transações (TCL)
+
+    Transações:
+        Uma transação é uma sequência de operações que são executadas como uma única unidade de trabalho. Você pode usar COMMIT para salvar as mudanças ou ROLLBACK para desfazer.
+        Exemplo: Iniciar uma transação e confirmar as mudanças.
+
+BEGIN TRANSACTION;
+UPDATE clientes SET nome = 'Maria Souza' WHERE id = 2;
+COMMIT;
+
+5. Projeto Prático: Sistema de Gestão de Clientes
+
+CREATE DATABASE gestao_clientes;
+USE gestao_clientes;
+
+-- Tabela de Clientes
+CREATE TABLE clientes (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    data_nascimento DATE,
+    telefone VARCHAR(15)
+);
+
+-- Tabela de Endereços
+CREATE TABLE enderecos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    cliente_id INT,
+    rua VARCHAR(100),
+    cidade VARCHAR(50),
+    estado VARCHAR(50),
+    cep VARCHAR(10),
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+);
+
+-- Tabela de Pedidos
+CREATE TABLE pedidos (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    cliente_id INT,
+    data_pedido DATE,
+    valor_total DECIMAL(10, 2),
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+);
+
+-- Inserindo Clientes
+INSERT INTO clientes (nome, email, data_nascimento, telefone)
+VALUES ('João Silva', 'joao.silva@email.com', '1985-03-25', '123456789'),
+       ('Maria Souza', 'maria.souza@email.com', '1990-06-15', '987654321');
+
+-- Inserindo Endereços
+INSERT INTO enderecos (cliente_id, rua, cidade, estado, cep)
+VALUES (1, 'Rua das Flores, 123', 'São Paulo', 'SP', '12345-678'),
+       (2, 'Avenida Central, 456', 'Rio de Janeiro', 'RJ', '23456-789');
+
+-- Inserindo Pedidos
+INSERT INTO pedidos (cliente_id, data_pedido, valor_total)
+VALUES (1, '2024-08-01', 250.00),
+       (2, '2024-08-15', 150.50),
+       (1, '2024-08-20', 350.75);
+
+SELECT * FROM clientes;
+
+SELECT pedidos.id, pedidos.data_pedido, pedidos.valor_total
+FROM pedidos
+JOIN clientes ON pedidos.cliente_id = clientes.id
+WHERE clientes.nome = 'João Silva';
+
+SELECT clientes.nome, COUNT(pedidos.id) AS total_pedidos, SUM(pedidos.valor_total) AS total_gasto
+FROM clientes
+JOIN pedidos ON clientes.id = pedidos.cliente_id
+GROUP BY clientes.nome;
+
+SELECT clientes.nome, pedidos.valor_total
+FROM clientes
+JOIN pedidos ON clientes.id = pedidos.cliente_id
+WHERE pedidos.valor_total > 200;
+
+UPDATE clientes
+SET email = 'novo.email@dominio.com'
+WHERE id = 1;
+
+DELETE FROM pedidos WHERE id = 3;
+
+Esse projeto prático cobre desde a criação do banco de dados e tabelas até a manipulação de dados e consultas. 
+
+## Python
+
+Semana 1: Conceitos Básicos
+
+    Resumo: Esta semana é dedicada à revisão e prática dos fundamentos de Python, incluindo variáveis, loops, condicionais, e funções.
+
+    Tarefas:
+        Variáveis: Estude a criação e uso de variáveis. Compreenda os diferentes tipos de dados (inteiros, floats, strings, listas, dicionários).
+        Loops e Condicionais: Revise for e while loops, bem como condicionais if, elif, else.
+        Funções: Aprenda a criar funções e a utilizar parâmetros e retornos.
+
+    Exemplo Prático:
+        Cenário: Criar um programa que calcula a média de uma lista de números fornecidos pelo usuário.
+
+        def calcular_media(numeros):
+    return sum(numeros) / len(numeros)
+
+numeros = [float(x) for x in input("Digite os números separados por espaço: ").split()]
+media = calcular_media(numeros)
+print(f"A média é: {media}")
+
+Semana 2-3: Pandas
+
+    Resumo: Nas semanas 2 e 3, você focará no estudo da biblioteca Pandas, essencial para a manipulação de dados em Python, especialmente com DataFrames e arquivos Excel.
+
+    Tarefas:
+        Semana 2:
+            Estude a estrutura básica de um DataFrame e como manipular seus dados.
+            Pratique a leitura de arquivos Excel e a conversão em DataFrames com pd.read_excel.
+        Semana 3:
+            Realize operações comuns com DataFrames, como filtragem (df[df['coluna'] > valor]), agrupamento (df.groupby('coluna')), e agregação (df['coluna'].sum()).
+            Aprenda a manipular colunas e linhas, lidar com valores nulos, e realizar operações de merge e join entre DataFrames.
+
+    Exemplo Prático:
+        Cenário: Carregar um arquivo Excel com dados de vendas, filtrar as vendas acima de um certo valor, e calcular o total por região.
+
+import pandas as pd
+
+# Carregar dados de um arquivo Excel
+df = pd.read_excel('vendas.xlsx')
+
+# Filtrar vendas acima de 1000
+vendas_acima_de_1000 = df[df['valor_venda'] > 1000]
+
+# Agrupar por região e calcular o total
+total_por_regiao = vendas_acima_de_1000.groupby('regiao')['valor_venda'].sum()
+
+print(total_por_regiao)
+
+Semana 4: Aplicação Prática
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Carregar múltiplos arquivos Excel de diferentes regiões
+arquivos = ['vendas_regiao_norte.xlsx', 'vendas_regiao_sul.xlsx', 'vendas_regiao_leste.xlsx', 'vendas_regiao_oeste.xlsx']
+df_list = [pd.read_excel(arquivo) for arquivo in arquivos]
+
+# Combinar todos os DataFrames em um único
+df_combined = pd.concat(df_list, ignore_index=True)
+
+# Limpar dados (exemplo: remover linhas com valores nulos)
+df_cleaned = df_combined.dropna()
+
+# Agrupar por mês e calcular o total de vendas
+df_cleaned['data'] = pd.to_datetime(df_cleaned['data'])
+df_cleaned['mes'] = df_cleaned['data'].dt.to_period('M')
+total_vendas_mensal = df_cleaned.groupby('mes')['valor_venda'].sum()
+
+# Gerar um gráfico do total de vendas por mês
+total_vendas_mensal.plot(kind='bar')
+plt.title('Total de Vendas por Mês')
+plt.xlabel('Mês')
+plt.ylabel('Total de Vendas')
+plt.show()
+
+# Salvar o relatório em um novo arquivo Excel
+total_vendas_mensal.to_excel('relatorio_vendas_mensal.xlsx')
